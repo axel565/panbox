@@ -20,6 +20,13 @@ async def hi(ctx):
 
 @bot.command() 
 async def dothis(ctx):
-    await ctx.send("Done :sunglasses:") 
+    await ctx.send("Done :sunglasses:")
+@bot.group() 
+async def ign(ctx):
+    await ctx.send("No IGN yet")
+@ign.command()
+async def add(ctx,*,inp)
+    await ctx.send("Your IGN : "+inp)
+ 
 
 bot.run(os.getenv('token'))
