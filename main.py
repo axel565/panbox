@@ -12,6 +12,7 @@ async def on_ready():
 @bot.command() 
 async def say(ctx,*,args):
     await ctx.send(args) 
+    await ctx.message.delete()
 @bot.command() 
 async def hi(ctx):
     user = ctx.author
