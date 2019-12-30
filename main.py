@@ -24,9 +24,9 @@ async def dothis(ctx):
 @bot.group() 
 async def ign(ctx):
     pass
-@ign.command
+@ign.command()
 async def add(ctx,*,inp):
+    
     await ctx.send("Your IGN : "+str(inp))
- 
 
 bot.run(os.getenv('token'))
