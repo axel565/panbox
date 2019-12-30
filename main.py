@@ -25,8 +25,8 @@ async def dothis(ctx):
 async def ign(ctx):
     await ctx.send("No IGN yet")
 @ign.command
-async def add(ctx)
-    await ctx.send("Your IGN : ")
+async def add(ctx,*,inp):
+    await ctx.send("Your IGN : "+str(inp))
  
 
 bot.run(os.getenv('token'))
