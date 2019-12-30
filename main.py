@@ -23,7 +23,7 @@ async def dothis(ctx):
     await ctx.send("Done :sunglasses:")
 @bot.group() 
 async def ign(ctx):
-    await ctx.send("No IGN yet")
+    pass
 @ign.command
 async def add(ctx,*,inp):
     await ctx.send("Your IGN : "+str(inp))
