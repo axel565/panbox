@@ -11,7 +11,7 @@ async def on_ready():
    
 @bot.command() 
 async def say(ctx,*,args):
-    embed = discord.Embed(title=ctx.author, description=args, color=0x0000ff)
+    embed = discord.Embed(title=str(ctx.author), description=args, color=0x0000ff)
     await ctx.send(embed=embed)
     await ctx.message.delete()
 @bot.command() 
