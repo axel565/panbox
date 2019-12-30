@@ -11,7 +11,8 @@ async def on_ready():
    
 @bot.command() 
 async def say(ctx,*,args):
-    await ctx.send(args) 
+    embed = discord.Embed(title=ctx.author, description=args, color=0x0000ff)
+    await ctx.send(embed=embed)
     await ctx.message.delete()
 @bot.command() 
 async def hi(ctx):
@@ -24,12 +25,7 @@ async def dothis(ctx):
 @bot.group() 
 async def ign(ctx):
     
-    embed = discord.Embed(title="No IGN", description="No IGN Was Added!", color=0x00ff00)
-    
-    embed.add_field(name="Field1", value="hi", inline=False) 
-    
-    embed.add_field(name="Field2", value="hi2", inline=False) 
-    
+    embed = discord.Embed(title="No IGN", description="No IGN  Added!", color=0xff0000)
     await ctx.send(embed=embed)
     
 @ign.command()
