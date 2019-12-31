@@ -16,7 +16,7 @@ async def say(ctx,*,args):
     await ctx.message.delete()
 @bot.command() 
 async def hi(ctx):
-    user = ctx.author
+    user = ctx.author.mention
     await ctx.send("Hello "+str(user)) 
 
 @bot.command() 
