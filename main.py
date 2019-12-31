@@ -32,5 +32,12 @@ async def ign(ctx):
 async def add(ctx,*,inp):
     
     await ctx.send("Your IGN : "+str(inp))
-
+    
+@bot.command() 
+async def profile(ctx):
+    embed = discord.Embed(title=str(ctx.author.mention), description='', color=0x0000ff)
+    
+    await ctx.send(embed=embed)
+    
+    
 bot.run(os.getenv('token'))
